@@ -1,8 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
-using Name;
 using poc.src.app.Api.Controllers;
 using poc.src.app.Application.Interfaces;
+using poc.src.app.Application.UseCases;
+using poc.src.app.Domain.Repositories;
 using poc.src.app.Infra.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -22,6 +23,11 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 
 builder.Services.AddScoped<IVehicleRepository, VehicleRepository>();
+builder.Services.AddScoped<ICreateVehiclesUseCase, CreateVehiclesUseCase>();
+builder.Services.AddScoped<IDeleteVehiclesUseCase, DeleteVehiclesUseCase>();
+builder.Services.AddScoped<IGetAllVehiclesUseCase, GetAllVehiclesUseCase>();
+builder.Services.AddScoped<IGetByIdVehiclesUseCase, GetByIdVehiclesUseCase>();
+builder.Services.AddScoped<IUptadeVehiclesUseCase, UptadeVehiclesUseCase>();
 
 var app = builder.Build();
 

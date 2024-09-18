@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace poc.src.app.Api.Dtos.http
+namespace poc.src.app.Application.Dtos.http
 {
     public class CreateVehicleRequestDto{
         public string Make { get; set; } = string.Empty;

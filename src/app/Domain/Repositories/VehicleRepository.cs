@@ -7,7 +7,7 @@ using poc.src.app.Application.Interfaces;
 using poc.src.app.Infra.Persistence;
 using poc.src.appDomain.Entities;
 
-namespace Name
+namespace poc.src.app.Domain.Repositories
 {
     public class VehicleRepository : IVehicleRepository
     {
